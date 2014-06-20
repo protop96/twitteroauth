@@ -1,53 +1,20 @@
 TwitterOAuth
 ------------
 
-PHP library for working with Twitter's OAuth API.
+كلاس php للتعمل مع تويتر
 
-Flow Overview
+وضائف الكلاس
 =============
 
-1. Build TwitterOAuth object using client credentials.
-2. Request temporary credentials from Twitter.
-3. Build authorize URL for Twitter.
-4. Redirect user to authorize URL.
-5. User authorizes access and returns from Twitter.
-6. Rebuild TwitterOAuth object with client credentials and temporary credentials.
-7. Get token credentials from Twitter.
-8. Rebuild TwitterOAuth object with client credentials and token credentials.
-9. Query Twitter API.
+1. الحصول على صلاحيات .
+2. ارسال التغريدات الى تويتر.
+3. البحث في محرك تويتر.
 
-Terminology
-===========
 
-The terminology has changed since 0.1.x to better match the draft-hammer-oauth IETF
-RFC. You can read that at http://tools.ietf.org/html/draft-hammer-oauth. Some of the
-terms will differ from those Twitter uses as well.
 
-client credentials - Consumer key/secret you get when registering an app with Twitter.
-temporary credentials - Previously known as the request token.
-token credentials - Previously known as the access token.
 
-Parameters
-==========
 
-There are a number of parameters you can modify after creating a TwitterOAuth object.
-
-The latest revisions of TwitterOAuth support the Twitter API v1.1 but if you want to
-update an old install from v1.0 you can do the following.
-
-    $connection->host = "https://api.twitter.com/1.1/";
-
-Custom useragent.
-
-    $connection->useragent = 'Custom useragent string';
-
-Verify Twitters SSL certificate.
-
-    $connection->ssl_verifypeer = TRUE;
-
-There are several more you can find in TwitterOAuth.php.
-
-Extended flow using example code
+شرح الاستخدام
 ================================
 
 To use TwitterOAuth with the Twitter API you need *TwitterOAuth.php*, *OAuth.php* and
